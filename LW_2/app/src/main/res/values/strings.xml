@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab02</string>
+    <string name="edit_hint">Введите число</string>
+    <string name="operation_result">Результат операции: %1$f</string>
+    <string name="result_no">Здесь будет результат…</string>
+    <string name="button_sum">+</string>
+    <string name="button_sub">-</string>
+    <string name="button_div">/</string>
+    <string name="button_mul">*</string>
+    <string name="author">Сурков Д. А. 8В01</string>
+</resources>
