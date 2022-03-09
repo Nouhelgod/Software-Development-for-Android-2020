@@ -5,7 +5,6 @@ fun main() {
     
     var arr = IntArray(10) { it };
     
-    // Наибольший элемент массива
     var tmp: Int = arr[0];
     var tmp_pos: Int = 0;
     
