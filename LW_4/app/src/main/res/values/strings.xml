@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">lab04</string>
+    <string name="author">Сурков Д. 8В01</string>
+    <string name="button_check">Ответ</string>
+</resources>
