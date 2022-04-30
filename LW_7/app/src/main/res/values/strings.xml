@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LW_7</string>
+    <string name="button_open_location_settings">Открыть настройки геолокации</string>
+</resources>
