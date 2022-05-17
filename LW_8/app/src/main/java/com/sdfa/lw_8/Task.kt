@@ -2,7 +2,7 @@ package com.sdfa.lw_8
 
 import kotlin.random.Random
 
-class Task () {
+class Task (op: Int) {
 
     var A: Int = 0
     var B: Int = 0
@@ -10,13 +10,14 @@ class Task () {
     var Answer: Int = 0
     var AnswerPosition = 0
     var AnswerList = mutableListOf<Int>()
+    var Op: Int = op
 
     fun generate() {
         val operations: List<String> = listOf(" + ", " - ", " * ")
 
         A = Random.nextInt(-9, 9)
         B = Random.nextInt(-9, 9)
-        Operation = operations[Random.nextInt(0, 3)]
+        Operation = operations[Op]
         AnswerPosition = Random.nextInt(0, 4)
 
         if (Operation == " + ") { Answer = A + B }

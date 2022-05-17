@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.FragmentTransaction
 
-class MainActivity : AppCompatActivity(), LeftFragment.OnDataListener {
+class MainActivity : AppCompatActivity(), LeftFragment.OnDataListener, RightFragment.onResultListener {
 
     private var isTwoPane = false
 
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity(), LeftFragment.OnDataListener {
         setContentView(R.layout.activity_main)
 
         isTwoPane = findViewById<View>(R.id.frame_left) != null
+
 
         if (isTwoPane) {
             supportFragmentManager.beginTransaction()
@@ -43,4 +44,17 @@ class MainActivity : AppCompatActivity(), LeftFragment.OnDataListener {
             .commit()
     }
 
+    override fun onResult(op: Int, right: Int, wrong: Int) {
+        supportFragmentManager.beginTransaction()
+            .replace(
+                if (isTwoPane)
+                    R.id.frame_right
+                else
+                    R.id.container,
+                RightFragment(op, right, wrong)
+            )
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .addToBackStack(null)
+            .commit()
+    }
 }
