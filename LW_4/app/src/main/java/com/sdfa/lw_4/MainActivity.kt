@@ -22,9 +22,7 @@ class MainActivity : AppCompatActivity() {
         val answersList = findViewById<ListView>(R.id.answers)
 
         val adapter = ArrayAdapter<Int>(
-            this,
-            android.R.layout.simple_list_item_1,
-            task.AnswerList
+            this, android.R.layout.simple_list_item_1, task.AnswerList
         )
 
 
